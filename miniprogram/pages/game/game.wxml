@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view>
+  <i-notice-bar icon="integral">
+      Hi，{{userInfo.nickName}}。欢迎您来挑战，加油!
+  </i-notice-bar>
+  <view class="userinfo" wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="userinfo-tips">请授权获取头像和昵称，以记录您的排行榜</view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授  权 </button>
+  </view>
+
+ <view  class="canvas" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'> 
+    <canvas
+      style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'
+      disable-scroll='true'
+      canvas-id="firstCanvas"
+      bindtouchstart="setChess">
+    </canvas>   
+   </view>
+   <view class="tips-box">
+      <view>
+        <picker bindchange="bindPickerChange" value="{{sizeIndex}}" range="{{sizeArray}}">
+          <view class="picker">
+            棋盘尺寸：{{sizeArray[sizeIndex]}}*{{sizeArray[sizeIndex]}}，点击修改
+          </view>
+        </picker>
+      </view>
+      <text class="tips {{!me ? 'show': ''}}">请落棋</text>  
+   </view>
+   <view  class="bottom">
+    <i-button bindtap="reStart"
+        type="success"
+        class="restart"
+        inline="true"
+        size="small"
+        >放弃本局，再来</i-button>
+   </view>
+   
+</view>

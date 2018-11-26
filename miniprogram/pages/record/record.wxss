@@ -1,0 +1,12 @@
+/* pages/record/index.wxss */
+.header {
+  margin: 30rpx auto;
+  text-align: center;
+}
+.header image {
+  width: 351rpx;
+  height: 216rpx;
+}
+.content-box {
+  
+}

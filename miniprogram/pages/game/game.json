@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-button": "../../component/iview/button/index",
+    "i-notice-bar": "../../component/iview/notice-bar/index"
+  }
+}

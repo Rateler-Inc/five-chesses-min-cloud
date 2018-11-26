@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/game/game",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#306AA7",
+    "navigationBarTitleText": "五子棋",
+    "navigationBarTextStyle": "#fff"
+  },
+    "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/game/game",
+          "text": "游戏",
+          "iconPath": "/assets/images/tabbar/game.png",
+          "selectedIconPath": "/assets/images/tabbar/game@selected.png"
+        },
+        {
+          "pagePath": "pages/record/record",
+          "text": "记录",
+          "iconPath": "/assets/images/tabbar/record.png",
+          "selectedIconPath": "/assets/images/tabbar/record@selected.png"
+        }
+      ],
+      "backgroundColor": "#ffffff",
+      "selectedColor": "#1b8ae0",
+      "color": "#000000",
+      "borderStyle": "#f5f5f5",
+      "position": "bottom"
+    }
+}
