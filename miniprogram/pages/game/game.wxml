@@ -1,14 +1,15 @@
 <!--index.wxml-->
 <view>
-  <i-notice-bar icon="integral">
-      Hi，{{userInfo.nickName}}。欢迎您来挑战，加油!
-  </i-notice-bar>
+
   <view class="userinfo" wx:if="{{!hasUserInfo && canIUse}}">
     <view class="userinfo-tips">请授权获取头像和昵称，以记录您的排行榜</view>
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授  权 </button>
   </view>
-
- <view  class="canvas" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'> 
+  <view wx:else>
+    <i-notice-bar icon="integral">
+      Hi，{{userInfo.nickName}}。欢迎您来挑战，加油!
+    </i-notice-bar>
+    <view class="canvas-box" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'> 
     <canvas
       style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'
       disable-scroll='true'
@@ -35,4 +36,5 @@
         >放弃本局，再来</i-button>
    </view>
    
+  </view>
 </view>

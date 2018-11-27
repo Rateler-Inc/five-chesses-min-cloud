@@ -1,7 +1,31 @@
 <!--pages/record/index.wxml-->
-<view>
+<view class="container-box">
   <view class="header">
-    <image src='../../assets/images/record.jpg'></image>
+    <image src='../../assets/images/record.png'></image>
   </view>
-  <view class="content-box"></view>
+  <view class="content-box">
+    <view class="header-box tr-box">
+      <text class="width80">#</text>
+      <text class="nick-name">昵称</text>
+      <text class="width80">获胜</text>
+      <text class="width80">局数</text>
+      <text class="width80">胜率</text>
+    </view>
+    <block wx:for="{{array}}">
+      <view class="tr-box item-box" >
+        <view class="range width80">
+          <image wx:if="{{index==0}}" src="../../assets/images/no1.png"></image>
+          <image wx:if="{{index==1}}" src="../../assets/images/no2.png"></image>
+          <image wx:if="{{index==2}}" src="../../assets/images/no3.png"></image>
+          <text>{{index + 1}}</text>
+          </view>
+        <text class="nick-name">{{item.nickName}}</text>
+        <text class="width80">{{item.winTimes}}</text>
+        <text class="width80">{{item.playTimes}}</text>
+        <text class="width80">{{item.percent}}</text>
+      </view>
+    </block>
+  </view>
+  <i-message id="message" /> 
+  <i-spin wx:if="{{loading}}" fix size="large"></i-spin> 
 </view>

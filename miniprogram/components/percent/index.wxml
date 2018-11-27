@@ -1,0 +1,2 @@
+<!--components/share-favorite/index.wxml-->
+<text>{{percent}}</text>

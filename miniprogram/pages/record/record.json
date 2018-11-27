@@ -1,1 +1,9 @@
-{}
+{
+  "navigationBarTitleText": "排名",
+  "usingComponents": {
+    "percent": "../../components/percent/index",
+    "i-message": "../../components/iview/message/index",
+    "i-spin": "../../components/iview/spin/index"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,74 +1,45 @@
 // pages/record/index.js
 //获取应用实例
 const app = getApp()
+import { DataCtrlObj } from '../../utils/database.js'
+const { $Message } = require('../../components/iview/base/index');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    array: [],
+    loading: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this._getUserInfo()
-    this.getRecords()
-  },
-  _getUserInfo: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+    
   },
 
   /**
    * 获取排行
    */
-  getRecords () {
-    const db = wx.cloud.database({
-      env: 'test-26a0c9'
-    })
-    const users = db.collection('users')
-    const user = users.doc('W_Zm7Dxe6pOxy3iS').get({
-      success: function (res) {
-        // res.data 包含该记录的数据
-        console.log(res.data)
-      }
+  getRecords (callback) {
+    DataCtrlObj.getList((res) => {
+      //排序，按照获胜次数排序
+      let tempArr = res.sort((a, b)=>{
+        return b.winTimes - a.winTimes
+      })
+      tempArr.forEach((item) => {
+        if (item.playTimes === 0) {
+          item.playTimes = 1
+        }
+        item.percent = Math.round((item.winTimes / item.playTimes) * 100) + '%'
+      })
+      this.setData({
+        array: tempArr,
+        loading: false
+      })
+      callback && callback()
     })
   },
 
@@ -83,7 +54,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getRecords()
   },
 
   /**
@@ -104,7 +75,20 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    if(this.data.loading){
+      return
+    }
+    this.setData({
+      loading: true
+    })
+    this.getRecords(() => {
+      wx.stopPullDownRefresh();
+      $Message({
+        content: '数据更新成功',
+        type: 'success'
+      });
+    });
+    
   },
 
   /**

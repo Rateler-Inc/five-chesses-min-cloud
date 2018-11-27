@@ -126,10 +126,14 @@ Page({
     if (y < 0) {
       y = 0
     }
-    this.steps ++
-    console.log(`第${this.steps}步`)
     var i = Math.round(x / this.perWidth);
     var j = Math.round(y / this.perWidth);
+    // let size = this.data.sizeArray[this.data.sizeIndex]
+    // if (i === 0 || j === 0 || i === size || j === size) {
+    //   return
+    // }
+    this.steps++
+    console.log(`第${this.steps}步`)
     if (this.chressBord[i][j] == 0) {
       this.oneStep(i, j, this.data.me);
       this.chressBord[i][j] = 1;//我        
@@ -223,17 +227,17 @@ Page({
    */
   iniWins() {
     //赢法数组
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex]; i++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
       this.wins[i] = [];
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex]; j++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex]; j++) {
         this.wins[i][j] = [];
       }
     }
 
     var count = 0; //赢法总数
     //横线赢法
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex]; i++) {
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex] - 4; j++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex] - 4; j++) {
         for (var k = 0; k < 5; k++) {
           this.wins[i][j + k][count] = true;
         }
@@ -242,8 +246,8 @@ Page({
     }
 
     //竖线赢法
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex]; i++) {
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex] - 4; j++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex] - 4; j++) {
         for (var k = 0; k < 5; k++) {
           this.wins[j + k][i][count] = true;
         }
@@ -252,8 +256,8 @@ Page({
     }
 
     //正斜线赢法
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex] - 4; i++) {
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex] - 4; j++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex] - 4; i++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex] - 4; j++) {
         for (var k = 0; k < 5; k++) {
           this.wins[i + k][j + k][count] = true;
         }
@@ -262,8 +266,8 @@ Page({
     }
 
     //反斜线赢法
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex] - 4; i++) {
-      for (var j = this.data.sizeArray[this.data.sizeIndex] - 1; j > 3; j--) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex] - 4; i++) {
+      for (var j = this.data.sizeArray[this.data.sizeIndex]; j > 3; j--) {
         for (var k = 0; k < 5; k++) {
           this.wins[i + k][j - k][count] = true;
         }
@@ -284,16 +288,16 @@ Page({
     var computerScore = [];
     var max = 0;
     var u = 0, v = 0;
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex]; i++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
       myScore[i] = [];
       computerScore[i] = [];
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex]; j++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex]; j++) {
         myScore[i][j] = 0;
         computerScore[i][j] = 0;
       }
     }
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex]; i++) {
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex]; j++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex]; j++) {
         if (this.chressBord[i][j] == 0) {
           for (var k = 0; k < this.winCounts; k++) {
             if (this.wins[i][j][k]) {
@@ -383,9 +387,9 @@ Page({
    * 初始化棋盘内存信息
    */
   initChressBord() {
-    for (var i = 0; i < this.data.sizeArray[this.data.sizeIndex]; i++) {
+    for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
       this.chressBord[i] = [];
-      for (var j = 0; j < this.data.sizeArray[this.data.sizeIndex]; j++) {
+      for (var j = 0; j <= this.data.sizeArray[this.data.sizeIndex]; j++) {
         this.chressBord[i][j] = 0;
       }
     }

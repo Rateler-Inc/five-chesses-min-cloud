@@ -39,9 +39,13 @@
   color: #fff;
   font-size: 30rpx;
 }
-.canvas {
+.canvas-box {
   margin: 10rpx auto;
   overflow: hidden;
+  z-index: 1;
+}
+canvas {
+  z-index: 1;
 }
 
 .tips-box {

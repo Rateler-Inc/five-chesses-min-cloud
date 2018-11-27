@@ -10,7 +10,7 @@ const DataCtrlObj = {
    * 更新或者添加数据
    */
   updateOrAddDate(userInfo, gameResult) {
-    this.get(userInfo.openId, (data) => {
+    this.getOne(userInfo.openId, (data) => {
       console.log(data)
       if(data.length == 0) {
         this.add(userInfo)
@@ -29,7 +29,6 @@ const DataCtrlObj = {
         failTimes: 0,
         winTimes: 0,
         nickName: userInfo.nickName,
-        openId:userInfo.openId,
         playTimes: 0,
         winMinSteps: 9999
       },
@@ -39,12 +38,20 @@ const DataCtrlObj = {
     })
   },
   /**
-   * 获取数据
+   * 获取某个数据
    */
-  get (openId, callback) {
+  getOne (openId, callback) {
     return dataSet.where({
-      openId: openId
+      _openid: openId
     }).get().then(res => {
+      callback(res.data)
+    })
+  },
+  /**
+   * 获取列表数据
+   */
+  getList (callback) {
+    return dataSet.get().then(res => {
       callback(res.data)
     })
   },

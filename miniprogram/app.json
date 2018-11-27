@@ -26,7 +26,7 @@
         },
         {
           "pagePath": "pages/record/record",
-          "text": "记录",
+          "text": "排名",
           "iconPath": "/assets/images/tabbar/record.png",
           "selectedIconPath": "/assets/images/tabbar/record@selected.png"
         }

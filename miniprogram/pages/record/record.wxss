@@ -1,6 +1,10 @@
 /* pages/record/index.wxss */
+.container-box{
+  min-height: 100vh;
+  /* background-color: rgba(0,0,0,.5); */
+}
 .header {
-  margin: 30rpx auto;
+  margin: 30rpx auto 0 0;
   text-align: center;
 }
 .header image {
@@ -8,5 +12,48 @@
   height: 216rpx;
 }
 .content-box {
-  
+  margin: 0 20rpx;
+}
+.content-box .header-box {
+  border-bottom: 1rpx solid rgba(0, 0, 0, .3);
+}
+.content-box .header-box text {
+  color: #000;
+  font-size: 36rpx;
+}
+.content-box  .tr-box {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-box .item-box text {
+  font-size: 34rpx;
+  color:rgba(0, 0, 0, .8);
+}
+.content-box .item-box percent text {
+  position: relative;
+  top: -4rpx;
+}
+.item-box .range {
+  position:relative;
+}
+.item-box .range image{
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  left: -25rpx;
+  top: 8rpx;
+}
+.width80 {
+  width: 80rpx;
+  text-align: center;
+}
+.width160 {
+  width: 160rpx;
+}
+.nick-name {
+  flex: 1;
+  max-width: 200rpx;
+  overflow: hidden;
 }

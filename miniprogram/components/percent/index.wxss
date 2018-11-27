@@ -1,0 +1,5 @@
+/* components/share-favorite/index.wxss */
+text {
+  color: #7c7c7c;
+  font-size: 28rpx;
+}
