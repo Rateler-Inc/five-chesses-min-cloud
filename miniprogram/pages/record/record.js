@@ -26,17 +26,17 @@ Page({
   getRecords (callback) {
     DataCtrlObj.getList((res) => {
       //排序，按照获胜次数排序
-      let tempArr = res.sort((a, b)=>{
-        return b.winTimes - a.winTimes
-      })
-      tempArr.forEach((item) => {
+      // let tempArr = res.sort((a, b)=>{
+      //   return b.winTimes - a.winTimes
+      // })
+      res.forEach((item) => {
         if (item.playTimes === 0) {
           item.playTimes = 1
         }
         item.percent = Math.round((item.winTimes / item.playTimes) * 100) + '%'
       })
       this.setData({
-        array: tempArr,
+        array: res,
         loading: false
       })
       callback && callback()

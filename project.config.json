@@ -9,7 +9,7 @@
 		"newFeature": true
 	},
 	"appid": "wx95aa9952726382be",
-	"projectname": "%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9",
+	"projectname": "five-chesses-min-cloud",
 	"libVersion": "2.2.5",
 	"condition": {
 		"search": {
@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -47,6 +47,11 @@
 					"name": "index",
 					"pathName": "pages/index/index",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "testcanvas",
+					"pathName": "pages/testcanvas/testcanvas"
 				}
 			]
 		}

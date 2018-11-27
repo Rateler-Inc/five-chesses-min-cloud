@@ -1,7 +1,7 @@
 <!--pages/record/index.wxml-->
 <view class="container-box">
   <view class="header">
-    <image src='../../assets/images/record.png'></image>
+    <image src='../../assets/images/record2.jpg'></image>
   </view>
   <view class="content-box">
     <view class="header-box tr-box">

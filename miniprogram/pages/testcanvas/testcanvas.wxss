@@ -1,0 +1,4 @@
+/* miniprogram/pages/testcanvas/testcanvas.wxss */
+.clip-text_tree {
+  background-image: url(http://i.imgur.com/IuijDCu.png);
+}

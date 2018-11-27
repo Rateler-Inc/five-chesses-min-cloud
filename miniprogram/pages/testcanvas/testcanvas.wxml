@@ -1,0 +1,8 @@
+
+  <canvas
+    style='width:400px; height:400px'
+    disable-scroll='true'
+    canvas-id="firstCanvas">
+  </canvas>   
+
+<view class="clip-text clip-text_tree">JINTOS</view>

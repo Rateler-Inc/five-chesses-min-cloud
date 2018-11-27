@@ -185,7 +185,7 @@ Page({
     this.context.closePath();
 
     if (this.data.me) {
-      this.context.setFillStyle('#EEEEEE')
+      this.context.setFillStyle('#ffffff')
     } else {
       this.context.setFillStyle('#000000')
     }
@@ -198,10 +198,12 @@ Page({
   **绘画棋盘*
   */
   drawChessBoard() {
-    this.context.setStrokeStyle("#bfbfbf") //边框颜色
+    this.context.setFillStyle('#cea587')
+    this.context.fillRect(0, 0, this.canvasWidth, this.canvasWidth)
+    this.context.setStrokeStyle("rgba(0,0,0,.5)") //边框颜色
 
     for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
-      this.context.setLineWidth(2)
+      this.context.setLineWidth(1)
       this.context.save()
       this.context.moveTo(i * this.perWidth, 0)
       this.context.lineTo(i * this.perWidth, this.canvasWidth)

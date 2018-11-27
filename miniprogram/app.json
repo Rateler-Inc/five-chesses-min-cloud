@@ -8,7 +8,8 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/testcanvas/testcanvas"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,25 +17,25 @@
     "navigationBarTitleText": "五子棋",
     "navigationBarTextStyle": "#fff"
   },
-    "tabBar": {
-      "list": [
-        {
-          "pagePath": "pages/game/game",
-          "text": "游戏",
-          "iconPath": "/assets/images/tabbar/game.png",
-          "selectedIconPath": "/assets/images/tabbar/game@selected.png"
-        },
-        {
-          "pagePath": "pages/record/record",
-          "text": "排名",
-          "iconPath": "/assets/images/tabbar/record.png",
-          "selectedIconPath": "/assets/images/tabbar/record@selected.png"
-        }
-      ],
-      "backgroundColor": "#ffffff",
-      "selectedColor": "#1b8ae0",
-      "color": "#000000",
-      "borderStyle": "#f5f5f5",
-      "position": "bottom"
-    }
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/game/game",
+        "text": "游戏",
+        "iconPath": "/assets/images/tabbar/game.png",
+        "selectedIconPath": "/assets/images/tabbar/game@selected.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "排名",
+        "iconPath": "/assets/images/tabbar/record.png",
+        "selectedIconPath": "/assets/images/tabbar/record@selected.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#1b8ae0",
+    "color": "#000000",
+    "borderStyle": "#f5f5f5",
+    "position": "bottom"
+  }
 }

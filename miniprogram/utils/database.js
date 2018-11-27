@@ -51,7 +51,7 @@ const DataCtrlObj = {
    * 获取列表数据
    */
   getList (callback) {
-    return dataSet.get().then(res => {
+    return dataSet.orderBy('winTimes', 'desc').get().then(res => {
       callback(res.data)
     })
   },
@@ -61,7 +61,7 @@ const DataCtrlObj = {
   update (data, gameResult) {
     data.playTimes++
     if (gameResult.state) {
-      data.winsTimes ++
+      data.winTimes ++
       data.winMinSteps = Math.min(gameResult.steps, data.winMinSteps)
     }else{
       data.failTimes ++
