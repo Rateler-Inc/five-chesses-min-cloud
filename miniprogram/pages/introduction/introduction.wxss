@@ -1,0 +1,23 @@
+/* miniprogram/pages/introduction.wxss */
+.desc-header {
+  padding: 40rpx;
+  color: #3a3a3a;
+  font-size: 34rpx;
+  text-align: center;
+}
+.desc-item {
+    padding: 0 25rpx 0 34rpx;
+    color: rgba(0, 0, 0, .5);
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+}
+.tips {
+    padding: 0 25rpx 0 66rpx;
+    color: rgba(0, 0, 0, .5);
+    font-size: 28rpx;
+    margin-bottom: 30rpx;
+}
+.start {
+  margin-top: 60rpx;
+  text-align: center;
+}

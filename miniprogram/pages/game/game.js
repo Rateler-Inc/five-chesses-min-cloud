@@ -171,7 +171,7 @@ Page({
         })
         setTimeout(() => {
           this.computerAI();
-        }, 500)
+        }, Math.random() * 2000)
       }
     }
   },
@@ -198,9 +198,9 @@ Page({
   **绘画棋盘*
   */
   drawChessBoard() {
-    this.context.setFillStyle('#cea587')
+    this.context.setFillStyle('#c0c0c0')
     this.context.fillRect(0, 0, this.canvasWidth, this.canvasWidth)
-    this.context.setStrokeStyle("rgba(0,0,0,.5)") //边框颜色
+    this.context.setStrokeStyle("rgba(0,0,0,.6)") //边框颜色
 
     for (var i = 0; i <= this.data.sizeArray[this.data.sizeIndex]; i++) {
       this.context.setLineWidth(1)

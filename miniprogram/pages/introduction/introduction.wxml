@@ -1,0 +1,19 @@
+<!--miniprogram/pages/introduction.wxml-->
+<view>
+    <view class="desc-header">项目说明：</view>
+    <view class="desc-item">1. 本系统非商业游戏项目，不存在游戏内支付，游戏PK对决等功能。</view>
+    <view class="desc-item">2. 本项目是以对弈为载体的AI人工智能算法学习项目。目的在于启发、激励学生的AI 算法学习，目标是做出alpha go 那样的智能水平。少年有理想，国家有力量，民族有希望。</view> 
+    <view class="desc-item">3. 本系统服务端使用的算法包括：</view>
+    <view>
+      <view class="tips">(1). 遍历坐标的一步最优算法（目前阶段）。</view>
+      <view class="tips">(2). 博弈树启发式搜索算法。</view>
+      <view class="tips">(3). BP 网络的参数自适应算法。</view>
+    </view>
+    <view class="start">
+       <i-button bindtap="start"
+        type="success"
+        inline="true"
+        size="small"
+        >开始学习</i-button>
+    </view>
+</view>

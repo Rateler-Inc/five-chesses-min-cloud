@@ -1,5 +1,8 @@
 //app.js
+const ENV = 'test-26a0c9'
+const Version = '1.0.0'
 App({
+  version: Version,
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -7,7 +10,7 @@ App({
     } else {
       wx.cloud.init({
         traceUser: true,
-        env: 'test-26a0c9'
+        env: ENV
       })
     }
 

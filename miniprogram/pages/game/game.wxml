@@ -9,6 +9,7 @@
     <i-notice-bar icon="integral">
       Hi，{{userInfo.nickName}}。欢迎您来挑战，加油!
     </i-notice-bar>
+    
     <view class="canvas-box" style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'> 
     <canvas
       style='width:{{canvasWidth}}px; height:{{canvasHeight}}px'

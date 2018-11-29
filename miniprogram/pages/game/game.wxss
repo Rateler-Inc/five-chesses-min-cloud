@@ -43,6 +43,7 @@
   margin: 10rpx auto;
   overflow: hidden;
   z-index: 1;
+  box-shadow: 0 0 10rpx 10rpx #c0c0c0;
 }
 canvas {
   z-index: 1;

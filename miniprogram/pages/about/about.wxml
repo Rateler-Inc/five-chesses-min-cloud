@@ -1,0 +1,26 @@
+<view class="container about-container">
+    <view class="content">
+        <view class="header">
+            <image src="{{logoUrl}}"></image>
+            <view>V {{version}}</view>
+            <view>Created By <text class="txt">索芙特儿滋事</text></view>
+            <!-- <view>本版本为初级AI，高级AI后续跟进，请期待</view> -->
+        </view>
+        <view class="footer">
+            <view class="official-accounts">项目贡献人员</view>
+            <view class="tips">
+                <view>1. 韩金秀（Smile Han），文都教育武汉研发中心美女工程师。本项目优秀UI贡献者。</view>
+                 <view>2. 郭慧敏（Haley Guo），网易杭州研发中心美女工程师。本项目优秀UI贡献者。</view>
+                 <view>3. 蒋建明（Jimmy Jiang），斑马快跑研发中心工程师。本项目代码贡献者。</view>
+                 <view>4. 张小印（Hb Zyin163），美团北京总部研发中心高级工程师。本项目初级算法贡献者。</view>
+                <view>5. 刘斌（Bin Liu），华中科技大学博士。本项目启发式搜索算法贡献者。</view>
+             
+                <view>6. 赵森（Festone Zhao），上海八彦图武汉研发总部架构师，华科预备研究生。本项目安卓手机测试机贡献者。</view>
+  
+            </view>
+        </view>
+    </view>
+    <view class="slogan">
+        <text class="txt">没有什么能否阻挡，我们对自由的向往</text>
+    </view>
+</view>

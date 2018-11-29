@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/introduction/introduction",
     "pages/game/game",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -9,7 +10,8 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/record/record",
-    "pages/testcanvas/testcanvas"
+    "pages/testcanvas/testcanvas",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,8 +22,14 @@
   "tabBar": {
     "list": [
       {
+        "pagePath": "pages/introduction/introduction",
+        "text": "首页",
+        "iconPath": "/assets/images/tabbar/home.png",
+        "selectedIconPath": "/assets/images/tabbar/home@selected.png"
+      },
+      {
         "pagePath": "pages/game/game",
-        "text": "游戏",
+        "text": "发现",
         "iconPath": "/assets/images/tabbar/game.png",
         "selectedIconPath": "/assets/images/tabbar/game@selected.png"
       },
@@ -30,6 +38,12 @@
         "text": "排名",
         "iconPath": "/assets/images/tabbar/record.png",
         "selectedIconPath": "/assets/images/tabbar/record@selected.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "/assets/images/tabbar/about.png",
+        "selectedIconPath": "/assets/images/tabbar/about@selected.png"
       }
     ],
     "backgroundColor": "#ffffff",
