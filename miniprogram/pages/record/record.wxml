@@ -10,6 +10,7 @@
       <text class="width80">获胜</text>
       <text class="width80">局数</text>
       <text class="width80">胜率</text>
+      <text class="width128">最快回合</text>
     </view>
     <block wx:for="{{array}}">
       <view class="tr-box item-box" >
@@ -23,6 +24,7 @@
         <text class="width80">{{item.winTimes}}</text>
         <text class="width80">{{item.playTimes}}</text>
         <text class="width80">{{item.percent}}</text>
+        <text class="width128 center-item">{{item.winMinSteps}}</text>
       </view>
     </block>
   </view>

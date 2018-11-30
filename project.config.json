@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -51,7 +51,19 @@
 				{
 					"id": -1,
 					"name": "testcanvas",
-					"pathName": "pages/testcanvas/testcanvas"
+					"pathName": "pages/testcanvas/testcanvas",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "game",
+					"pathName": "pages/game/game"
 				}
 			]
 		}

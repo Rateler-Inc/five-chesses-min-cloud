@@ -33,6 +33,9 @@ Page({
         if (item.playTimes === 0) {
           item.playTimes = 1
         }
+        if (item.winMinSteps === 9999) {
+          item.winMinSteps = ''
+        }
         item.percent = Math.round((item.winTimes / item.playTimes) * 100) + '%'
       })
       this.setData({

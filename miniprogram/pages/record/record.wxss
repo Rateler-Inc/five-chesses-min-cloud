@@ -46,18 +46,21 @@
   height: 40rpx;
   width: 40rpx;
   position: absolute;
-  left: -25rpx;
+  left: -15rpx;
   top: 8rpx;
 }
 .width80 {
   width: 80rpx;
   text-align: center;
 }
-.width160 {
-  width: 160rpx;
+.width128 {
+  width: 128rpx;
 }
 .nick-name {
   flex: 1;
   max-width: 200rpx;
   overflow: hidden;
+}
+.center-item {
+  text-align: center;
 }
